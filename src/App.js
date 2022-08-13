@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 import SpeciesState from './context/SpeciesState'
 import { Footer, Landing, } from './pages/'

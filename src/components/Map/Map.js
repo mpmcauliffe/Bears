@@ -1,4 +1,4 @@
-import React, { useContext, } from 'react'
+import { useContext, } from 'react'
 import activeSpeciesContext from '../../context/activeSpeciesContext'
 import { MapFrame, Overlay, } from './Map.comp'
 

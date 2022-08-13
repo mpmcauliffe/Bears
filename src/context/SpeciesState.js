@@ -1,4 +1,4 @@
-import React, { useReducer, } from 'react'
+import { useReducer, } from 'react'
 import ActiveSpeciesContext from './activeSpeciesContext'
 import speciesReducer from './speciesReducer'
 import { UPDATE_SPECIES_OVERLAY,

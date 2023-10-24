@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import styled from 'styled-components'
+import SpeciesState from './context/SpeciesState'
+import { Footer, Landing, } from './partials/'
+import { MainController, Map, MainText, Subs, } from './components'
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+const BackgroundContainer = styled.div`
+    width: 100%;
+    /* background: linear-gradient(0deg, rgba(248,252,255,1) 0%, rgba(242,250,255,1) 50%); */
+    background: linear-gradient(180deg, rgba(252,252,255,1) 0%, rgba(252,252,255,1) 72%, rgba(255,0,215,.2) 100%);
+`
+
+const ContentContainer = styled.section`
+    width: 100%;
+    margin: 0 auto;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media(min-width: 769px) { width: 90%; }
+    @media(min-width: 1081px) { width: 77%; }
+    @media(min-width: 1921px) { width: 63%; }
+`
+
+const App = props => {
+    return (
+        <BackgroundContainer>
+            <SpeciesState>
+                {/*  */}
+                <Landing />
+                
+                <div style={{ marginTop: '12rem' }} />
+                
+                <div style={{ position: 'relative', }}>
+                    <Map />
+                    <Subs />
+                </div>
+
+                <MainController />
+
+                <ContentContainer>
+                    <MainText />
+                </ContentContainer>
+            </SpeciesState>
+
+            <Footer />
+        </BackgroundContainer>
+        
+    )
 }
+
 
 export default App

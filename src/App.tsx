@@ -23,7 +23,7 @@ const ContentContainer = styled.section`
     @media(min-width: 1921px) { width: 63%; }
 `
 
-const App = props => {
+const App = () => {
     return (
         <BackgroundContainer>
             <SpeciesState>

@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 import SpeciesState from './context/SpeciesState'
-import { Footer, Landing, } from './partials/'
+import { Footer, Landing, } from './pages/'
 import { MainController, Map, MainText, Subs, } from './components'
 
 
@@ -23,7 +23,7 @@ const ContentContainer = styled.section`
     @media(min-width: 1921px) { width: 63%; }
 `
 
-const App = () => {
+const App = props => {
     return (
         <BackgroundContainer>
             <SpeciesState>
